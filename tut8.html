@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is form</h2>
+    <form action="backend.php">
+        <label for="input_name">Name:</label>
+        <div> <input type="text" id="input_name"></div>
+        <label for="input_roll">Roll:</label>
+       <div><input type="text" id="input_roll"></div>
+       <label for="input_mail">Email:</label>
+       <div><input type="email" name="" id="input_mail"> </div>
+
+       <div> Male: <input type="radio" name="gender" id=""> Female: <input type="radio" name="gender" id=""></div>
+       
+        <label for="input_text">write about yourself: </label>
+       <div><textarea name="" id="input_text" cols="30" rows="10"></textarea></div>
+
+       <label for="car">Select car:</label>
+       <div>
+
+        <select name="cars" id="">
+            
+            <option value="Indigo">Indigo</option>
+            <option value="cultus">cultus</option>
+            <option value="Mehran" selected>Mehran</option>
+            <option value="Indus">Indus</option>
+        </select>
+       </div>
+
+
+       
+       <div>
+        <input type="submit" value="Submit Now">
+    </div>
+    <div>
+        <input type="reset" value="Reset Now">
+    </div>
+    </form>
+</body>
+</html>
