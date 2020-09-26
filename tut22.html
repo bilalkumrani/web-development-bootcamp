@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pseudo selectors and more styling</title>
+
+    <style>
+
+        .container{
+            background-color: gray;
+            width: 500px;
+            margin: auto;
+            padding: 40px;
+            margin-top: 100px;
+        }
+        
+        .btn{
+            background-color: yellowgreen;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: solid black;
+            size: 13px;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: green;
+        }
+        a:active{
+            background-color: hotpink;
+        }
+        a:visited{
+            background-color: blue;
+        }
+        
+        
+    </style>
 </head>
 <body>
+
+    <div class="container">
+        <h2>This is my heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero deserunt sunt eius placeat deleniti amet, soluta ad sint nobis corrupti! Culpa obcaecati suscipit ut quo architecto perferendis maiores saepe asperiores! Praesentium, saepe quisquam.</p>
+
+        <a href="www.google.com" class="btn">Read more</a>
+        <button class="btn">contact us</button>
+    </div>
     
 </body>
 </html>
