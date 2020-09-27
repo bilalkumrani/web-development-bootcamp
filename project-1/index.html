@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal's fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url(img/background.jpg);
+            color: white;
+            font-family: 'Baloo Bhaina 2', cursive;
+        }
+
+        .left {
+            /* border: solid red; */
+            display: inline-block;
+            position: absolute;
+            left: 50px;
+            top: 33px;
+        }
+
+        .mid {
+            /* border: solid red; */
+            width: 50%;
+            margin: 33px auto;
+
+
+        }
+
+        .right {
+            /* border: solid red; */
+            right: 34px;
+            top: 33px;
+            position: absolute;
+        }
+
+        .navbar {}
+
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            padding: 25px 22px;
+            color: white;
+
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        .left img {
+            width: 100px;
+
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .btn {
+            margin: 0px 9px;
+            color: white;
+            padding: 4px 14px;
+            background-color: black;
+            border-radius: 5px;
+            border: 2px solid grey;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Baloo Bhaina 2', cursive;
+
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+
+        .container {
+            border: solid white;
+            margin: 84px 50px;
+            padding: 60px 60px;
+            width: 25%;
+            border-radius: 11px;
+        }
+
+        .form-group input {
+            width: 250px;
+            padding: 7px;
+            margin: 11px auto;
+            display: block;
+            font-size: 15px;
+            border-radius: 10px;
+            font-family: 'Baloo Bhaina 2', cursive;
+        }
+        .container h1{
+                text-align: center;
+        }
+        .container button{
+            display: block;
+            width: 100px;
+            margin: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="left">
+            <!-- div left for logo -->
+            <img src="img/logo.png" alt="">
+            <div>Bilal Fitness</div>
+        </div>
+
+        <div class="mid">
+            <!-- div mid for navbar -->
+
+            <ul class="navbar">
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#">Abut US</a>
+                </li>
+                <li>
+                    <a href="#">Fitness Calculator</a>
+                </li>
+                <li>
+                    <a href="#">Contact US</a>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="right">
+            <!-- div right for buttons -->
+            <button class="btn">Call US</button>
+            <button class="btn">Email US</button>
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <h1>Join The Best Gym Now!</h1>
+
+        <form action="backend.php">
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Name">
+                <input type="text" name="" placeholder="Enter Your Age">
+                <input type="text" name="" placeholder="Enter Your Locality">
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
