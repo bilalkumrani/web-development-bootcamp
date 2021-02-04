@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 100%;
+            background-color: brown;
+            display: flex;
+
+
+/*             properties for flex container */
+                /* flex-direction: row; by default */
+                flex-direction: row;
+
+                /* in row reverse boxes left se ulty ajaingy */
+
+                /* flex-direction: row-reverse; */
+                /* and same goes for column reverse */
+
+/* this will make it responsive (wrap property) */
+                flex-wrap: wrap;
+
+/* this will place contetnt in center */
+                /* justify-content: center;
+
+                justify-content: space-between; 
+
+                justify-content: space-around; */
+                
+
+/* this will make content in vertically center */
+                align-items: center;
+
+                /* other values of this align-items: ; */
+
+                align-items: flex-end;
+                align-items: flex-start;
+
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            border: 2px solid black;
+            margin: 2px;
+        }
+
+/* jiska order chota hoga wo pehly dikhega */
+        #item-1{
+            order: 4;
+        }
+        #item-2{
+            order: 3;
+
+            align-self: flex-end;
+            /* it will go in end of flexbox */
+
+        }
+        #item-3{
+            order: 2;
+
+            flex-basis: 320px;
+            /* when flex-direction: is row flex-basis: will control widths */
+            /* when flex-direction: is column flex-basis: will height */
+        }
+        #item-4{
+            order: 1;
+
+            /* is se grow or shirink hota h jb site responsive hoti  */
+            /* flex-grow: 2; */
+
+            /* flex-shrink: ; ye b isi trh work krta hai */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is FlexBox Tutorial</h1>
+    <div class="container">
+<div class="item" id="item-1">First Box</div>
+<div class="item" id="item-2">Second Box</div>
+<div class="item" id="item-3">Third Box</div>
+<div class="item" id="item-4">Fourth Box</div>
+
+
+    </div>
+</body>
+</html>
