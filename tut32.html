@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child psudo Selectors</title>
+
+    <style>
+
+        .container{
+            display: block;
+            width: 300px;
+            margin: auto;
+            border: 2px solid black;
+        }
+        input{
+            display: block;
+        }
+        /* hum sirf us input k liye css likhna chahty hen jiska input type text hai */
+        input[type="text"]{
+            padding: 50px;
+            border: solid red;
+        }
+        a[target]{
+            background-color: royalblue;
+        }
+        a[target='_self']{
+            color: red;
+        }
+
+        /* jis child pe css effect karana chahty hen wo child number likhengy */
+        li:nth-child(3){
+            color: turquoise;
+        }
+    /* agr hum chahty hen har doosry chiled pr color ho to ese krengy:- */
+
+        /* li:nth-child(2n+0){
+            color: violet;
+        } */
+
+        /* agr hum chahty hen k odd child pr efect ho:- */
+        li:nth-child(odd){
+            background-color: yellow;
+        }
+
+        /* for even child */
+        li:nth-child(even)
+        {
+            background-color: teal;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+<h1><a href="http://google.com/" target="_blank">Goto Google</a></h1>
+<h1><a href="http://facebook.com/" target="_self">Goto Facebook</a></h1>
+
+
+    <form action="" class="form-control">
+        <input type="text" placeholder="Enter your name">
+        <input type="password" placeholder="Enter your password">
+        <input type="submit" value="Submit">
+    </form>
+    <ul>
+        <li class="item" id="item-1">item-1</li>
+        <li class="item" id="item-2">item-2</li>
+        <li class="item" id="item-3">item-3</li>
+        <li class="item" id="item-4">item-4</li>
+        <li class="item" id="item-5">item-5</li>
+        <li class="item" id="item-6">item-6</li>
+    </ul>
+</div>
+    
+</body>
+</html>

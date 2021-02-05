@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+
+        h1{
+            
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            background-color: red;
+        }
+        /* ye dive k andar jitny bhi P hongy sab pe lago hoga chahy wo p kitna hi andhar ho */
+        div p{
+            background-color: green;
+            color: white;
+        }
+
+
+        /* agr hum chahty hen sirf jo dive ka direct child ho sirf wo effect ho na ky usky andar jitny b p hen */
+        div > p{
+            background-color: yellow;
+            color: black;
+        }
+
+
+/* agr hum chahty hen ese element ko target karen jiska pichla elemnt div ho */
+div + p{
+    color: white;
+    background-color: red;
+}
+
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+
+    <div class="container">
+
+        <div class="row">
+
+           <ul><li><p>This is a paragraph</p></li></ul> 
+           
+        </div>
+        <p>This is an other paragraph</p>
+        </div>
+    <p>This is outermost paragraph</p>
+    
+</body>
+</html>
