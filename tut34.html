@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            background-color: steelblue;
+
+            /* box ko shadow dene k liye */
+            box-shadow: 10px 20px 20px grey;
+ /* first value X-offset second value Y offset third value is for blur & we can add4th val for spreading shadow */
+ /* we can add more than one shadow color jut add colors by seprating them with comma */
+
+            /* box-shadow: inset; this is used for inside shadow */
+        }
+
+.card h1{
+    text-shadow: 1px 3px 2px white;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <dive class="card" id="car-1">
+            <h1>card-1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam repudiandae eos quaerat molestias ut,
+                accusantium nobis inventore, commodi culpa omnis voluptatum fugiat. Laudantium repudiandae temporibus
+                officia sequi iste aspernatur provident saepe perspiciatis ea ut.</p>
+        </dive>
+        <dive class="card" id="car-2">
+            <h1>card-2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla id nihil! Quam eum vel ad, debitis
+                cum possimus ipsam impedit maxime praesentium dignissimos doloremque omnis provident minus
+                necessitatibus, suscipit corrupti eligendi repellat voluptates.</p>
+        </dive>
+        <dive class="card" id="car-3">
+            <h1>card-3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, non. Soluta nesciunt qui illo beatae
+                nobis repudiandae voluptatem ducimus, deserunt dignissimos earum voluptates reiciendis nemo sint quia
+                animi, odit laudantium quaerat quidem harum quisquam.</p>
+        </dive>
+    </div>
+
+</body>
+
+</html>
