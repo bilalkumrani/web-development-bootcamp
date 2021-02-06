@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key frames and animations</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+            animation-name: bilal1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-in-out;
+
+            /* we can write above all properties in one statement like this: */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+        }
+        /* another way of adding animation */
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: indigo;
+            position: relative;
+            animation-name: bilal2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .container{
+            background-color: greenyellow;
+
+        }
+        
+
+        @keyframes bilal1{
+
+            from{
+                width: 10%;
+            }
+            to{
+                width: 100%;
+            }
+
+        }
+
+        /* another way to add keyfram */
+        @keyframes bilal2{
+            0%{
+            top: 0px;
+            left: 0px;
+            }
+            10%{
+                top: 250px;
+                left: 0px;
+            
+            }
+            25%{
+                top: 350px;
+                left: 0px;
+            
+            }
+            50%{
+                top: 350px;
+                left: 250px;
+            
+
+            }
+            75%{
+                top: 0px;
+                left: 250px;
+            
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+
+        <div class="box2">
+            this is another box
+        </div>
+    
+</body>
+</html>
