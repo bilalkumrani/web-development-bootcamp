@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            /* grid-column-gap: 2rem;
+            grid-row-gap: 1rem; */
+
+            grid-gap: 1rem;
+        }
+        .item{
+            background-color: purple;
+            border: 2px solid black;
+            padding: 20px 2px;
+        }
+
+        /* hum chahty hen top left waly 4 boxes ek hojain to ese krengy: */
+        .item:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            
+            /* same for row */
+
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-8</div>
+    </div>
+    
+</body>
+</html>
