@@ -5,8 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRID and Media queries</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-template-areas: 
+            'nav nav nav nav'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        .bdr{
+            border: 2px solid black;
+            padding: 10px;
+            background-color: wheat;
+        }
+        nav{
+            grid-area: nav;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+            text-align: center;
+        }
+
+
+        /* Media Queries */
+        @media (max-width:300px){
+            body{
+                background-color: rgb(255, 0, 0);
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-template-areas: 
+            'nav nav nav nav'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+            span{
+            display: block;
+            text-align: center;
+            padding: 10px;
+            }
+            aside{
+                display: none;
+            }
+        }
+        @media (min-width:300px) and (max-width:500px){
+            body{
+                background-color: blue;
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-template-areas: 
+            'nav nav nav nav'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+            aside{
+                display: none;
+            }
+            span{
+            display: block;
+            text-align: center;
+            padding: 10px;
+            }
+        }
+        @media (min-width:500px) and (max-width:800px){
+            body{
+                background-color: rgb(255, 251, 0);
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-template-areas: 
+            'nav nav nav nav'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+        span{
+            display: block;
+            text-align: center;
+            padding: 10px;
+        }
+        }
+        @media (min-width:800px){
+            body{
+                background-color: rgb(0, 219, 18);
+            }
+        }
+            
+        
+    </style>
 </head>
 <body>
+
+    <div class="container">
+
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact Us</span>
+        </nav>
+        <section  class="bdr">
+            <h2>Learn Css here</h2>
+        </section>
+        <aside  class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+        <footer class="bdr">
+            Copyright &copy; Bilal Khan | All rights reserved
+        </footer>
+    </div>
     
 </body>
 </html>
