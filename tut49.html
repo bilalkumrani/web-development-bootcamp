@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | strings and Strings methods</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+
+        <div id="content"></div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus atque fuga voluptas repudiandae! Minus,
+            saepe reiciendis. Quas possimus eveniet sint provident illo eius quos pariatur incidunt temporibus,
+            reiciendis sequi nam, ad molestias repudiandae dolor.</p>
+            
+    </div>
+
+
+<script>
+var string = "This is a string";
+console.log(string);
+
+var name = "Bilal";
+var about = "good person";
+var channel = "Tekdot";
+
+//when we want to use single and double both qoutes inside strings
+var temp = `${name} is a ${about} and he has a channel named ${channel}`;
+console.log(temp);
+
+//to find length of string
+var len = name.length;
+console.log(`Length of name is ${len}`);
+
+//to insert something in DOM dynamically
+document.getElementById('content').innerHTML = '<h1>This text is inserted Dynamically</h1>'
+
+    </script>
+</body>
+
+</html>
