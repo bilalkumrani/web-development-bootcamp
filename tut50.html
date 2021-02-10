@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings and Functions</title>
+</head>
+<body>
+    
+
+
+    <script>
+var str = "This is a string";
+console.log("first occurence of 'is' at index:");
+//firs occurence of substring
+var pos = str.indexOf('is');
+console.log(pos);
+//last occurence of substring
+console.log("first occurence of 'is' at index:");
+pos = str.lastIndexOf('is');
+console.log(pos);
+
+//to get substring form a string
+
+var substr= str.slice(0,4);
+console.log(substr);
+//to rplace substring in a string
+var replaced = str.replace('string','Bilal');
+console.log(replaced);
+
+//to change in upper case and lower case
+console.log(replaced.toUpperCase());
+console.log(replaced.toLowerCase());
+
+//to see which element is on sepecific index
+console.log(str.charAt(2));
+    </script>
+</body>
+</html>
