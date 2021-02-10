@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set timeOut clear TimeOut</title>
+</head>
+<body>
+<div class="container">
+<h1> Time Now is: </h1>
+<h1 id="time"> Time Now is: </h1>
+</div>
+    
+    <script>
+// setTimeout --> ye ek daffa chalta hai after interval of time
+// clearTimeout --> ye scheduled function ko bnd krdeta hai run hony se pehly
+// setInterval --> ye bar bar chalta hai after interval of time
+// clearInterval --> ye interval me jo function chlra hota hai usko bnd krdeta hai 
+
+
+//lets see both in action
+function greet(name){
+    console.log("Hello Good Morning " +name);
+
+}
+
+//setTimeout(greet,5000, "Bilal");
+//agr hum chahty hen jo function scheduled hai wo run na ho matlb wo cancel hojai to ese krengy
+timeOut = setTimeout(greet,5000, "Bilal");
+clearTimeout(timeOut); //agr ye nahi likhengy to interval k bad execute hojaiga greet function
+let clr = setInterval(greet, 1000,"Bilal");
+clearInterval(clr);
+
+// writing code to diplay time on page
+
+function disTime(){
+    let time = new Date();
+    document.getElementById('time').innerHTML = time;
+}
+
+setInterval(disTime,1000);
+    </script>
+</body>
+</html>

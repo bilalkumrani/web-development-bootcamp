@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+
+        console.log("Hello");
+
+        for(i=0; i<10; i++){
+            console.log(i);
+        }
+        //foreach loop syntax is change here
+        let names = ["Bilal","sadiq","sajjad","abid"];
+        names.forEach(function f(element){
+            console.log("Hello " + element);
+        });
+
+        //there is another loop called "for of loop" which more simple
+        //it does same work as foreach but it is simple and easy to use
+        for (element of names){
+            console.log("HI "+element);
+        }
+
+        //there is another loop called "for in loop" which ised to iterate the object
+        let employee = {
+            name: "Bilal",
+            channel: "Tekdot",
+            salary: "10",
+            age: "20"
+        }
+
+        for(key in employee)
+        {
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+        
+
+        //there is also while and do while loop in js
+        //while and do while in js are same in java
+    </script>
+</body>
+</html>

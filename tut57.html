@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS events</title>
+    <style>
+        #btn {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            background: transparent;
+            cursor: pointer;
+
+        }
+
+        #btn:hover {
+            background-color: black;
+            color: white;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Some Browser events</h1>
+        <ul>
+            <li>Click</li>
+            <li>Context Menu</li>
+            <li>MouseOver/MouseOut</li>
+            <li>mousedown/mouseuUp</li>
+            <li>submit</li>
+            <li>Focus</li>
+            <li>DOMContentLoaded</li>
+            <li>Transitioned</li>
+
+        </ul>
+
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque commodi officia iste nulla maiores
+            mollitia,
+            distinctio obcaecati officiis neque explicabo omnis natus fuga, deserunt numquam laborum molestias veritatis
+            est fugiat animi, aliquid eos laudantium? Magnam eveniet enim esse, odit facilis quia porro at amet
+            praesentium atque laborum voluptates, quis consequatur saepe nulla, reiciendis architecto sequi. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Esse, minima amet? Alias, repellendus, tempora, deleniti
+            perferendis ipsam corporis molestias velit nobis ipsa id voluptatum quis optio vel nesciunt? Perferendis,
+            omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tempora velit iure explicabo,
+            aliquam dolorem molestiae cumque magnam dolorum sed, delectus commodi pariatur ad fugiat facere corporis eum
+            quidem? Ex, ab animi? Quos earum iusto culpa facere aliquid aut consectetur incidunt ipsam aspernatur
+            corporis quisquam animi ullam sapiente ratione, beatae atque, neque dolorem. Omnis, nam?</p>
+
+    </div>
+    <!-- im writing function name in btn tag bt best practice is to use event listener so we can create event listener -->
+    <button id="btn" onclick="togglehide()">Show/Hide</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let para = document.getElementById('para');
+        function togglehide() {
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+
+            // creating an event listener using event listeners is a best practice
+            para.addEventListener('mouseover', function run(){
+                console.log("Mouse Inside");
+            });
+            para.addEventListener('mouseout', function run(){
+                console.log("Mouse outside");
+            });
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <h1>DOM(Document object model)</h1>
+        <p>it means evrything written iside the body tag is called DOM so in thi tutorial im going to 
+            manipulate DOM
+        </p>
+
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact US</li>
+            <li>Services</li>
+            <li>More about Us</li>
+        </ul>
+    </div>
+    <script>
+
+        let main = document.getElementById('main');
+        console.log(main);
+
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        //when we want inner html written in section
+        console.log(nav.innerHTML);
+
+
+        //we can also grab the contaent by class name
+        //if there are more than one element with sme class it will return an Aray
+
+        //we can also use css selectors
+        let sel = document.querySelector('.container'); 
+        let sel1 = document.querySelector('#nav');
+      let sel2 = document.querySelectorAll('#nav>li'); //here it will return all elements which matches with our query
+
+      sel2[0].innerHTML = "Inserted";
+      sel2[1].innerHTML = "Inserted2";
+
+
+
+
+        // we can also use fist chile second child and other css selectors
+
+
+    </script>
+</body>
+</html>
