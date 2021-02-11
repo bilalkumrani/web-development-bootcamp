@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<body>
+    <dic class="container">
+        this is my container
+
+        json is used we want to transfer js object on networks
+        
+    </dic>
+
+    <script>
+
+        let jsonObj = {
+            name: "Bilal",
+            channel: "Tekdot",
+            friend: "Sadiq",
+            food: "bhindi"
+        } 
+        console.log(jsonObj);
+
+        // ab ye abject string me convert hojaiga
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+        
+        // ab hum ispy string k functions use krskty hen easily
+        let newstr = myJsonStr.replace("bhindi", "Alu");
+        console.log(newstr);
+
+        // ab hum isko wapas object me convert krna chahty hen jo k aksar on other end krna hota hai after transfering
+   
+       let newJsonObj = JSON.parse(newstr);
+
+       console.log(newJsonObj);
+   </script>
+</body>
+</html>

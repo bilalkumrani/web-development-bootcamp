@@ -1,0 +1,1 @@
+Writing in Browser JS and  Developer Console
