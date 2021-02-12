@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    style 
+        include ../static/style.css
+    |<!-- to include style sheet -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1> Get this gym memebership fo 60$ only fill the form now</h1>
+                <p>
+                |  <!-- |  #{content}  -->
+                |  <!-- use pipe otherwise pug will be confused -->
+                </p>
+            
+                <form action="/" method="post" id="contact">
+                <input type="text" name="name" id="name" placeholder="Enter Name">
+                <input type="text" name="age" id="age" placeholder="Enter Age">
+                <input type="text" name="gender" id="gender" placeholder="Gender">
+                <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Address"></textarea>
+                <textarea name="more" id="more" cols="30" rows="10" placeholder="More about you.."></textarea>
+                <button class="btn">Submit</button>
+                </form>
+    </div>
+
+    
+    
+</body>
+</html>

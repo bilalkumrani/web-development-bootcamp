@@ -1,0 +1,38 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+
+    /* ye code static folder me para hai */
+}
+nav{
+    background-color: yellow;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+
+}
+li{
+    list-style: none;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+input, textarea{
+    display: block;
+    padding: 4px;
+    margin: 15px auto;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+
+}
+.btn{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+
+}
