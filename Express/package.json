@@ -1,0 +1,15 @@
+{
+  "name": "bk",
+  "version": "1.0.0",
+  "description": "this pkg created when learning and eploring node and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bilal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
