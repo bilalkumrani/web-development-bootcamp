@@ -1,7 +1,25 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
 const port = 80;
+
+//mongoose stuff
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
+
+//define mongoose schema
+const contactSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+    email: String,
+    address: String,
+    desc: String
+    
+  });
+  
+  const Contact = mongoose.model('contact', contactSchema);
+
 
 //Express stuff
 app.use('/static',express.static('static'));
@@ -18,6 +36,14 @@ app.get('/',(req,res)=>{
 });
 app.get('/contact',(req,res)=>{
     res.status(200).render('contact.pug');
+});
+app.post('/contact',(req,res)=>{
+    var myData = new Contact(req.body);
+    myData.save().then(()=>{
+        res.send("This item has been save dto database");
+    }).catch(()=>{
+        res.status(400).send("Item is faild to save in database")
+    });
 });
 
 //start server
