@@ -8,7 +8,6 @@ app.use('/static',express.static('static'));
 app.use(express.urlencoded());
 
 //pug stuff
-
 app.set('view engine', 'pug'); //set the template engine as pug
 app.set('views', path.join(__dirname,'views')); // set the views directory
 
