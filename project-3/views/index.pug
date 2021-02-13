@@ -1,0 +1,25 @@
+//- index.pug
+doctype html
+html
+  head
+    title Dance academy
+    style
+      include ../static/style.css
+  body
+    nav#navbar
+      ul
+        li #[a(href="/") Home]
+        li #[a(href="/") About]
+        li #[a(href="/") Services]
+        li #[a(href="/") Class info]
+        li #[a(href="/") Contact Us]
+    
+    section#introSection
+        | Welcome to Dance Academy
+    section#sponsorSection
+        h3 Our sponsors
+
+    footer#footer 
+        | this is footer 
+    script
+      include ../static/script.js

@@ -1,0 +1,47 @@
+//mondo db commands
+//inserting data in mongo db
+
+use bilalkart  // ek database banjaiga or use hona start hojaiga
+
+//is query se ek data insert hojaiga
+db.items.insertOne({name:"samsung 30s", price: 22000, rating: 4.5, qty: 233, sold:98})
+
+//multiple doc add krny k lye
+//ismy hum array of objects send krty hen
+db.items.insertMany([{name:"samsung 30s", price: 22000, rating: 4.5, qty: 233, sold:98},//yaha ek or object])
+
+db.items.insertMany([{name:"samsung 30s", price: 22000, rating: 4.5, qty: 233, sold:98},//yaha ek or object])
+
+db.items.insertMany([{name:"Moto 30s", price: 22500, rating: 3.5, qty: 433, sold:68},
+{name:"realme 10s", price: 33500, rating: 4.3, qty: 233, sold:83},
+{name:"nokia pixels", price: 98500, rating: 4.6, qty: 323, sold:66}])
+
+//to see data
+db.items.find() //is se sary items ajaingy
+
+//is se jo item is filter se match karega sirf wo aiga
+db.items.find({price: 3.5})
+
+
+
+//searching
+db.items.find({ratting: {$gte:3.5}})  gte matlab greaterthan or equal to, is se sirf wo objects ayngy
+//jinki rating 3.5 ya is se greater hogi
+
+
+//deleting
+db.items.deleteOne({price: 22000})
+
+//deleting is similar to searching
+
+//updation
+
+db.collectionName.insertOne({a: 89})  //is se ek or colection insert hojaigi
+
+
+//me chahta hun jo moto 30s hai uski price update hoky 2 rupy hojai
+db.items.updateOne({name: "Moto 30s"},{$set: {price: 2}}) //pehla jo match hoga wo update hojaiga
+
+//Me chahta hn jitny b match hon wo update hojain
+db.items.updateMany({name: "Moto 30s"},{$set: {price: 3, rating: 1}})
+
