@@ -1,0 +1,40 @@
+.container{
+    max-width: 1000px;
+    margin: auto;
+    height: 60vh;
+    background-color: blue;
+    overflow-y: auto;
+    
+}
+.message{
+    width: 24%;
+    margin: 10px;
+    background-color: chartreuse;
+    padding: 10px;
+    border-radius: 5px;
+}
+#send-container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    
+    
+}
+#messageInp{
+    margin: 10px;
+ width: 50%;
+ border: 2px solid black;   
+ padding: 10px;
+}
+.btn{
+    padding: 10px 20px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+
